@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background:#0a0a0b;/*near-black */
+    --color-foreground: #FFFFFF; /* white */
+    --color-border: rgba(255, 255, 255, 0.1); /* white-10 */
+    --color-input: #1A1A1D; /* gray-900 */
+    --color-ring: #00F5FF; /* electric-cyan */
+    
+    /* Card Colors */
+    --color-card: #1A1A1D; /* gray-900 */
+    --color-card-foreground: #FFFFFF; /* white */
+    
+    /* Popover Colors */
+    --color-popover: #1A1A1D; /* gray-900 */
+    --color-popover-foreground: #FFFFFF; /* white */
+    
+    /* Muted Colors */
+    --color-muted: #1A1A1D; /* gray-900 */
+    --color-muted-foreground: #A1A1AA; /* gray-400 */
+    
+    /* Primary Colors */
+    --color-primary: #00F5FF; /* electric-cyan */
+    --color-primary-foreground: #0A0A0B; /* near-black */
+    
+    /* Secondary Colors */
+    --color-secondary: #8B5CF6; /* purple-500 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #FF6B6B; /* coral-red */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #0A0A0B; /* near-black */
+    
+    /* Error Colors */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Surface Color */
+    --color-surface: #1A1A1D; /* gray-900 */
+    
+    /* Text Colors */
+    --color-text-primary: #FFFFFF; /* white */
+    --color-text-secondary: #A1A1AA; /* gray-400 */
+    
+    /* Animation Variables */
+    --animation-duration-fast: 150ms;
+    --animation-duration-normal: 300ms;
+    --animation-duration-slow: 600ms;
+    --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Shadow Variables */
+    --shadow-glow: 0 4px 20px rgba(0, 245, 255, 0.15);
+    --shadow-glow-intense: 0 8px 32px rgba(0, 245, 255, 0.25);
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scrolling for anchor navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  /* Glow effects for neon theme */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-primary-intense {
+    box-shadow: var(--shadow-glow-intense);
+  }
+  
+  /* Typography classes */
+  .font-heading {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Animation utilities */
+  .animate-fast {
+    animation-duration: var(--animation-duration-fast);
+    animation-timing-function: var(--animation-timing);
+  }
+  
+  .animate-normal {
+    animation-duration: var(--animation-duration-normal);
+    animation-timing-function: var(--animation-timing);
+  }
+  
+  .animate-slow {
+    animation-duration: var(--animation-duration-slow);
+    animation-timing-function: var(--animation-timing);
+  }
+  
+  /* Backdrop blur utilities */
+  .backdrop-blur-subtle {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-medium {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-strong {
+    backdrop-filter: blur(24px);
+  }
+}
