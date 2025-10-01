@@ -73,7 +73,7 @@ const ContactForm = () => {
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -81,7 +81,15 @@ const ContactForm = () => {
         subject: '',
         message: ''
       });
-    } catch (error) {
+       
+           // ⏳ Auto-hide after 3 seconds
+      setTimeout(() => {
+       setIsSubmitted(false);
+       }, 5000);
+
+     } 
+       
+    catch (error) {
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);

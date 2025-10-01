@@ -9,14 +9,24 @@ const ProjectFilters = ({
   sortBy, 
   onSortChange, 
   searchQuery, 
-  onSearchChange 
+  onSearchChange,
+  projects = [] // pass full projects list from parent
 }) => {
+  // Count projects by category
+  const counts = {
+    all: projects.length,
+    web: projects.filter(p => p.category === 'web').length,
+    mobile: projects.filter(p => p.category === 'mobile').length,
+    api: projects.filter(p => p.category === 'api').length,
+    'ui-ux': projects.filter(p => p.category === 'ui-ux').length,
+  };
+
   const filters = [
-    { id: 'all', label: 'All Projects', count: null },
-    { id: 'web', label: 'Web Apps', count: 8 },
-    { id: 'mobile', label: 'Mobile Apps', count: 4 },
-    { id: 'api', label: 'APIs', count: 6 },
-    { id: 'ui-ux', label: 'UI/UX', count: 3 }
+    { id: 'all', label: 'All Projects', count: counts.all },
+    { id: 'web', label: 'Web Apps', count: counts.web },
+    { id: 'mobile', label: 'Mobile Apps', count: counts.mobile },
+    { id: 'api', label: 'APIs', count: counts.api },
+    { id: 'ui-ux', label: 'UI/UX', count: counts['ui-ux'] }
   ];
 
   const sortOptions = [
@@ -50,6 +60,7 @@ const ProjectFilters = ({
           </button>
         )}
       </div>
+
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-2">
@@ -66,15 +77,13 @@ const ProjectFilters = ({
               whileTap={{ scale: 0.95 }}
             >
               {filter?.label}
-              {filter?.count && (
-                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
-                  activeFilter === filter?.id
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'bg-background text-muted-foreground'
-                }`}>
-                  {filter?.count}
-                </span>
-              )}
+              <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
+                activeFilter === filter?.id
+                  ? 'bg-primary-foreground/20 text-primary-foreground'
+                  : 'bg-background text-muted-foreground'
+              }`}>
+                {filter?.count}
+              </span>
             </motion.button>
           ))}
         </div>
@@ -99,6 +108,7 @@ const ProjectFilters = ({
           </div>
         </div>
       </div>
+
       {/* Active Filters Display */}
       {(activeFilter !== 'all' || searchQuery) && (
         <div className="flex items-center gap-2 mt-4 pt-4 border-t border-border">

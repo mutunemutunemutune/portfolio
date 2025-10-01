@@ -18,7 +18,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
       className="w-full bg-background border-t border-border pt-10 pb-6 mt-12"
     >
-      <div className="max-w-5xl  mx-auto px-4 sm:px-8 justify-between items-center">
+      <div className="max-w-7xl  mx-auto px-4 sm:px-8 justify-between items-center">
         <div className="flex flex-wrap justify-between  md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>

@@ -6,15 +6,14 @@ import ProfessionalStory from './components/ProfessionalStory';
 import PersonalInsights from './components/PersonalInsights';
 import Navigation from '../../components/Navigation';
 import ScrollIndicator from '../portfolio-home/components/ScrollIndicator';
+import Footer from '../../components/Footer';
 
 const AboutSection = () => {
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]);
 
-  useEffect(() => {
-    document.title = '3D Portfolio Pro - About Me';
-  }, []);
+
 
   return (
     <section id="about-section" className="min-h-screen bg-background text-foreground overflow-hidden snap-start">
@@ -165,10 +164,12 @@ const AboutSection = () => {
               </motion.div>
             </div>
           </motion.div>
-        </section>
+          
+      </section>
+        
       </div>
-  </section>
+      <Footer/>
+    </section>
   );
-};
-
+}
 export default AboutSection;

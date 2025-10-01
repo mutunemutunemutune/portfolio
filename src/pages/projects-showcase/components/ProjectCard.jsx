@@ -49,13 +49,13 @@ const ProjectCard = ({ project, onViewDetails, onViewDemo }) => {
           </div>
         </div>
 
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
           {project?.description}
         </p>
 
         {/* Technology Stack */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {project?.technologies?.slice(0, 4)?.map((tech, index) => (
+          {project?.technologies?.slice(0, 3)?.map((tech, index) => (
             <span
               key={index}
               className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md font-medium"
@@ -63,9 +63,9 @@ const ProjectCard = ({ project, onViewDetails, onViewDemo }) => {
               {tech}
             </span>
           ))}
-          {project?.technologies?.length > 4 && (
+          {project?.technologies?.length > 3 && (
             <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md font-medium">
-              +{project?.technologies?.length - 4} more
+              +{project?.technologies?.length - 3} more
             </span>
           )}
         </div>
