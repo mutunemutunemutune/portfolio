@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
+ 
 
 const ProjectFilters = ({ 
   activeFilter, 
@@ -12,13 +13,21 @@ const ProjectFilters = ({
   onSearchChange,
   projects = [] // pass full projects list from parent
 }) => {
-  // Count projects by category
+
+  // Map filter keys to actual category names in project data
+  const filterMap = {
+    web: 'Web Application',
+    mobile: 'Mobile Application',
+    api: 'Backend API',
+    'ui-ux': 'UI/UX Design',
+  };
+
   const counts = {
     all: projects.length,
-    web: projects.filter(p => p.category === 'web').length,
-    mobile: projects.filter(p => p.category === 'mobile').length,
-    api: projects.filter(p => p.category === 'api').length,
-    'ui-ux': projects.filter(p => p.category === 'ui-ux').length,
+    web: projects.filter(p => p.category === filterMap.web).length,
+    mobile: projects.filter(p => p.category === filterMap.mobile).length,
+    api: projects.filter(p => p.category === filterMap.api).length,
+    'ui-ux': projects.filter(p => p.category === filterMap['ui-ux']).length,
   };
 
   const filters = [

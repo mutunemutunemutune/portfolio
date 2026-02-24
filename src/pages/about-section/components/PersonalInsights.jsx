@@ -31,10 +31,10 @@ const PersonalInsights = () => {
   ];
 
   const stats = [
-    { label: "Years of Experience", value: "5+", icon: "Calendar" },
-    { label: "Projects Completed", value: "50+", icon: "CheckCircle" },
-    { label: "Technologies Mastered", value: "20+", icon: "Code" },
-    { label: "Happy Clients", value: "30+", icon: "Smile" }
+    { label: "Years of Experience", value: "3+", icon: "Calendar" },
+    { label: "Projects Completed", value: "30+", icon: "CheckCircle" },
+    { label: "Technologies Mastered", value: "9+", icon: "Code" },
+    { label: "Happy Clients", value: "15+", icon: "Smile" }
   ];
 
   return (
@@ -49,7 +49,7 @@ const PersonalInsights = () => {
         <h2 className="text-4xl font-bold text-white mb-4">
           What Drives <span className="text-primary">Me</span>
         </h2>
-        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
           Beyond the code and technologies, here are the principles and values that guide my work and career.
         </p>
       </motion.div>
@@ -75,13 +75,13 @@ const PersonalInsights = () => {
                   <span className="text-primary text-sm font-semibold uppercase tracking-wider">
                     {insight?.category}
                   </span>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-lg md:text-xl font-semibold text-white">
                     {insight?.title}
                   </h3>
                 </div>
               </div>
               
-              <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed whitespace-pre-line">
                 {insight?.content}
               </p>
             </div>

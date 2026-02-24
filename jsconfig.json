@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    // Add the following line to specify no global types, or list only the ones you need
+    "types": []
   }
 }

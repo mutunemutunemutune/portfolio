@@ -147,7 +147,7 @@ const HeroSection = () => {
   <motion.div variants={itemVariants} className="mb-8 sm:mb-12">
           <div className="relative max-w-4xl mx-auto">
             <motion.p
-              className="text-lg md:text-xl lg:text-3xl text-text-secondary leading-relaxed font-light"
+              className="text-lg md:text-xl lg:text-xl text-text-secondary leading-relaxed font-light"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
@@ -226,7 +226,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 1 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 5 }}
-            className="absolute bottom-4 sm:bottom-12 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-4 sm:bottom-12 left-[100px] md:left-1/2 transform -translate-x-1/2"
           >
             <button
               onClick={() => goToSection('/about-section')}

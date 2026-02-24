@@ -27,32 +27,32 @@ const PortfolioHome = () => {
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-primary mb-2"><Icon name="Zap" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">Real-Time Functionality</h3>
-            <p className="text-md text-muted-foreground">Live chat, notifications, and dashboards for instant user feedback and collaboration.</p>
+            <p className="text-sm md:text-base text-muted-foreground">Live chat, notifications, and dashboards for instant user feedback and collaboration.</p>
           </div>
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-secondary mb-2"><Icon name="Smartphone" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">Mobile Responsive</h3>
-            <p className="text-md text-muted-foreground">All projects are fully responsive and optimized for every device and screen size.</p>
+            <p className="text-sm md:text-base  text-muted-foreground">All projects are fully responsive and optimized for every device and screen size.</p>
           </div>
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-accent mb-2"><Icon name="Lock" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">Secure & Scalable</h3>
-            <p className="text-md text-muted-foreground">Built with best practices for security and scalability, ready for real-world use.</p>
+            <p className="text-sm md:text-base text-muted-foreground">Built with best practices for security and scalability, ready for real-world use.</p>
           </div>
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-success mb-2"><Icon name="Rocket" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">Performance Optimized</h3>
-            <p className="text-md text-muted-foreground">Fast load times and smooth interactions using modern frameworks and techniques.</p>
+            <p className="text-sm md:text-base  text-muted-foreground">Fast load times and smooth interactions using modern frameworks and techniques.</p>
           </div>
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-warning mb-2"><Icon name="Settings" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">Custom Integrations</h3>
-            <p className="text-md text-muted-foreground">APIs, third-party services, and custom features tailored to each project’s needs.</p>
+            <p className="text-sm md:text-base  text-muted-foreground">APIs, third-party services, and custom features tailored to each project’s needs.</p>
           </div>
           <div className="bg-card/80 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-border hover:shadow-2xl transition-all duration-300">
             <span className="text-info mb-2"><Icon name="Users" size={36} /></span>
             <h3 className="text-lg font-bold mb-2">User-Centered Design</h3>
-            <p className="text-md text-muted-foreground">Every project is designed for a great user experience and accessibility.</p>
+            <p className="text-sm md:text-base text-muted-foreground">Every project is designed for a great user experience and accessibility.</p>
           </div>
         </div>
       </section>
@@ -64,12 +64,12 @@ const PortfolioHome = () => {
           <div className="bg-gradient-to-br from-green-400/30 via-success/40 to-green-700/20 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-success">
             <span className="text-success mb-2"><Icon name="Trophy" size={32} /></span>
             <h3 className="text-lg font-bold mb-2">Awarded “Best Developer”</h3>
-            <p className="text-md text-muted-foreground">Recognized for outstanding project delivery and innovation in 2024.</p>
+            <p className="text-sm md:text-base  text-muted-foreground">Recognized for outstanding project delivery and innovation in 2024.</p>
           </div>
           <div className="bg-gradient-to-br from-blue-400/30 via-primary/40 to-blue-700/20 rounded-xl shadow-lg p-6 flex flex-col items-center text-center border border-primary">
             <span className="text-primary mb-2"><Icon name="BadgeCheck" size={32} /></span>
             <h3 className="text-lg font-bold mb-2">Certified Full Stack Engineer</h3>
-            <p className="text-md text-muted-foreground">Completed advanced certification in full stack web development.</p>
+            <p className="text-sm md:text-base  text-muted-foreground">Completed advanced certification in full stack web development.</p>
           </div>
         </div>
         <div className="text-center mt-6">

@@ -15,15 +15,15 @@ const ContactInfo = () => {
       id: 2,
       icon: "Linkedin",
       label: "LinkedIn",
-      value: "linkedin.com/in/johndeveloper",
-      href: "https://linkedin.com/in/johndeveloper"
+      value: "linkedin.com/in/victor-ndiritu",
+      href: "https://www.linkedin.com/in/victor-ndiritu-130908204/"
     },
     {
       id: 3,
       icon: "Github",
       label: "GitHub",
-      value: "github.com/johndeveloper",
-      href: "https://github.com/johndeveloper"
+      value: "github.com/victormutune",
+      href: "https://github.com/victormutune"
     },
     {
       id: 4,

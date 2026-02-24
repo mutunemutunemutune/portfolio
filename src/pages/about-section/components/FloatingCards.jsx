@@ -62,11 +62,11 @@ const FloatingCards = () => {
               <Icon name={card?.icon} size={24} className="text-white" />
             </motion.div>
             
-            <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300">
+            <h3 className="text-lg md:text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors duration-300">
               {card?.title}
             </h3>
             
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm md:text-base  leading-relaxed">
               {card?.description}
             </p>
             

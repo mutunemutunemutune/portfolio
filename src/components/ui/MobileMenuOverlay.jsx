@@ -71,11 +71,11 @@ const MobileMenuOverlay = ({ isOpen, onClose }) => {
           <div className="flex items-center justify-between p-6 border-b border-border relative z-[203]">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold font-mono">3D</span>
+                <span className="text-primary-foreground font-bold font-mono">VD</span>
               </div>
               <div>
                 <h2 className="text-lg font-semibold font-heading text-foreground">
-                  Portfolio Pro
+                  VICKDEV
                 </h2>
              
               </div>

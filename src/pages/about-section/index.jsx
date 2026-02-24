@@ -68,9 +68,9 @@ const AboutSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="text-xl text-gray-300 leading-relaxed max-w-2xl"
+                  className="text-md md:text-xl text-gray-300 leading-relaxed max-w-2xl"
                 >
-                  I'm a passionate Full Stack Developer who transforms ideas into elegant, functional, and user-centered digital solutions. With 5+ years of experience, I specialize in creating immersive web experiences that blend cutting-edge technology with intuitive design.
+                  I'm a passionate Full Stack Developer who transforms ideas into elegant, functional, and user-centered digital solutions. With 3+ years of experience, I specialize in creating immersive web experiences that blend cutting-edge technology with intuitive design.
                 </motion.p>
               </div>
 
@@ -78,7 +78,7 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-4 text-sm md:text-base"
               >
                 <div className="px-6 py-3 bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-full">
                   <span className="text-primary font-semibold">React & Next.js Expert</span>
@@ -108,10 +108,10 @@ const AboutSection = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-4xl font-bold text-white mb-4">
                 What I <span className="text-primary">Bring</span>
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-base text-gray-300 md:text-lg max-w-2xl mx-auto">
                 A unique blend of technical expertise, creative vision, and user-focused approach to every project.
               </p>
             </motion.div>
@@ -143,10 +143,10 @@ const AboutSection = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="bg-gradient-to-r from-card/50 to-card/30 backdrop-blur-sm border border-white/10 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Build Something <span className="text-primary">Amazing</span>?
               </h2>
-              <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-gray-300 text-base md:text-base mb-8 max-w-2xl mx-auto">
                 Let's collaborate and bring your vision to life with cutting-edge technology and creative solutions.
               </p>
               
@@ -157,7 +157,7 @@ const AboutSection = () => {
               >
                 <button
                   onClick={() => window.location.href = '/contact-form'}
-                  className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-background font-semibold rounded-2xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300"
+                  className="text-sm px-8 py-4 bg-gradient-to-r from-primary to-secondary text-background font-semibold rounded-2xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300"
                 >
                   Let's Work Together
                 </button>

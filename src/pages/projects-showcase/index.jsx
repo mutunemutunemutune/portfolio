@@ -10,7 +10,7 @@ import ProjectStats from './components/ProjectStats';
 import Navigation from '../../components/Navigation';
 import ScrollIndicator from '../portfolio-home/components/ScrollIndicator';
 import Footer from '../../components/Footer';
-import { supabase } from '../../utils/supabaseClient';        
+import { supabase } from '../../utils/supabaseClient';
 
 const ProjectsShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -44,7 +44,7 @@ const ProjectsShowcase = () => {
     fetchProjects();
   }, []);
 
-  // Filter and sort projects - FIXED: Added projects to dependencies
+  // Filter and sort projects - with projects in dependencies for proper reactivity
   const filteredAndSortedProjects = useMemo(() => {
     let filtered = projects || [];
 
@@ -83,7 +83,7 @@ const ProjectsShowcase = () => {
     }
 
     return filtered;
-  }, [projects, activeFilter, searchQuery, sortBy]); // Added projects here
+  }, [projects, activeFilter, searchQuery, sortBy]);
 
   const handleViewDetails = (project) => {
     setSelectedProject(project);
@@ -161,7 +161,7 @@ const ProjectsShowcase = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             My <span className="text-primary">Projects</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Explore my portfolio of web applications, mobile apps, and backend systems. 
             Each project showcases different aspects of modern development.
           </p>
@@ -170,7 +170,7 @@ const ProjectsShowcase = () => {
         {/* Project Statistics */}
         <ProjectStats projects={projects} />
 
-        {/* Filters */}
+        {/* Filters - now includes projects prop */}
         <ProjectFilters
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
@@ -178,16 +178,29 @@ const ProjectsShowcase = () => {
           onSortChange={setSortBy}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
+          projects={projects}
         />
 
-        {/* Results Count */}
+        {/* Results Count - with advanced calculation logic */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="mb-6"
         >
           <p className="text-muted-foreground">
-            Showing {filteredAndSortedProjects?.length} of {projects?.length} projects
+            Showing {filteredAndSortedProjects?.length} / {
+              (() => {
+                if (activeFilter === 'all' && !searchQuery) return projects?.length;
+                if (activeFilter === 'all' && searchQuery) return filteredAndSortedProjects?.length;
+                const filterMap = {
+                  'web': 'Web Application',
+                  'mobile': 'Mobile Application',
+                  'api': 'Backend API',
+                  'ui-ux': 'UI/UX Design'
+                };
+                return projects?.filter(project => project?.category === filterMap[activeFilter])?.length;
+              })()
+            } projects
             {searchQuery && ` for "${searchQuery}"`}
           </p>
         </motion.div>

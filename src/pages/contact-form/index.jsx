@@ -9,7 +9,7 @@ import ScrollIndicator from '../portfolio-home/components/ScrollIndicator';
 
 const ContactFormPage = () => {
   useEffect(() => {
-    document.title = '3D Portfolio Pro - Contact';
+    document.title = 'Vickdev';
   }, []);
 
   return (
@@ -87,7 +87,7 @@ const ContactFormPage = () => {
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-secondary">50+</span>
+                    <span className="text-2xl font-bold text-secondary">30+</span>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Projects Completed</h3>
                   <p className="text-gray-400 text-sm">

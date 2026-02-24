@@ -5,33 +5,33 @@ import Icon from '../../../components/AppIcon';
 const ProfessionalStory = () => {
   const storyPoints = [
     {
-      id: 1,
-      year: "2019",
-      title: "Started the Journey",
-      description: "Began my coding journey with HTML, CSS, and JavaScript. Built my first website and fell in love with creating digital experiences.",
-      icon: "Rocket"
-    },
-    {
-      id: 2,
-      year: "2020",
-      title: "Frontend Mastery",
-      description: "Mastered React.js and modern frontend frameworks. Started building complex single-page applications with responsive designs.",
-      icon: "Monitor"
-    },
-    {
-      id: 3,
-      year: "2021",
-      title: "Full Stack Evolution",
-      description: "Expanded to backend development with Node.js and databases. Built complete web applications from concept to deployment.",
-      icon: "Database"
-    },
-    {
-      id: 4,
-      year: "2023",
-      title: "Leading Projects",
-      description: "Now leading development teams and architecting scalable solutions. Passionate about mentoring and sharing knowledge.",
-      icon: "Users"
-    }
+    id: 1,
+    year: "2022",
+    title: "The Beginning",
+    description: "Started my coding journey by learning the fundamentals of web development — HTML and CSS. Built my first simple static website and discovered my passion for tech and design.",
+    icon: "Rocket"
+  },
+  {
+    id: 2,
+    year: "2023",
+    title: "JavaScript Mastery",
+    description: "Deepened my understanding of programming by mastering JavaScript. Created interactive and dynamic web projects that strengthened my frontend logic and problem-solving skills.",
+    icon: "Code"
+  },
+  {
+    id: 3,
+    year: "2024",
+    title: "Frontend Excellence",
+    description: "Mastered React and modern frontend frameworks. Built responsive, scalable, and high-performance web applications, showcasing expertise in user interface design and state management.",
+    icon: "Monitor"
+  },
+  {
+    id: 4,
+    year: "2025",
+    title: "Full Stack Expansion",
+    description: "Ventured into backend development, mastering Express.js and FastAPI to build powerful APIs and complete full-stack applications. Secured second place in the Metta Hackathon using the Metta language (AGI) — a defining milestone in my tech journey.",
+    icon: "Database"
+  }
   ];
 
   const containerVariants = {
@@ -68,7 +68,7 @@ const ProfessionalStory = () => {
         <h2 className="text-4xl font-bold text-white mb-4">
           My <span className="text-primary">Journey</span>
         </h2>
-        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-300 text-md md:text-lg max-w-2xl mx-auto">
           From curious beginner to experienced developer, here's how I've grown and evolved in the world of technology.
         </p>
       </motion.div>
@@ -102,15 +102,15 @@ const ProfessionalStory = () => {
               className="flex-1 bg-card/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
             >
               <div className="flex items-center space-x-3 mb-3">
-                <span className="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">
+                <span className="px-3 py-1 bg-primary/20 text-primary text-sm md:text-base font-semibold rounded-full">
                   {point?.year}
                 </span>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-lg md:text-lg  font-semibold text-white">
                   {point?.title}
                 </h3>
               </div>
               
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                 {point?.description}
               </p>
             </motion.div>

@@ -61,7 +61,7 @@ const SkillsDisplay = () => {
       level: 'Expert',
       icon: 'FileText',
       description: `Semantic HTML5 markup with accessibility best practices.\nExperience with modern web standards and SEO optimization.`,
-      experience: '5+ years'
+      experience: '3+ years'
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const SkillsDisplay = () => {
       level: 'Expert',
       icon: 'Palette',
       description: `Advanced CSS3 with Flexbox, Grid, and animations.\nExpertise in responsive design and CSS preprocessors.`,
-      experience: '5+ years'
+      experience: '3+ years'
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ const SkillsDisplay = () => {
       level: 'Expert',
       icon: 'Code',
       description: `Modern ES6+ JavaScript with async/await patterns.\nExperience with DOM manipulation and event handling.`,
-      experience: '4+ years'
+      experience: '2+ years'
     },
     {
       id: 4,
@@ -88,7 +88,7 @@ const SkillsDisplay = () => {
       level: 'Expert',
       icon: 'Atom',
       description: `React 18 with hooks, context, and performance optimization.\nExperience with component architecture and state management.`,
-      experience: '3+ years'
+      experience: '2+ years'
     },
     {
       id: 5,
@@ -97,7 +97,7 @@ const SkillsDisplay = () => {
       level: 'Advanced',
       icon: 'FileCode',
       description: `Type-safe JavaScript development with advanced types.\nExperience with interfaces, generics, and decorators.`,
-      experience: '2+ years'
+      experience: '1+ years'
     },
 
     // Backend Skills
@@ -108,7 +108,7 @@ const SkillsDisplay = () => {
       level: 'Advanced',
       icon: 'Server',
       description: `Server-side JavaScript with Express.js framework.\nExperience with RESTful APIs and microservices architecture.`,
-      experience: '3+ years'
+      experience: '1+ years'
     },
     {
       id: 7,
@@ -116,8 +116,8 @@ const SkillsDisplay = () => {
       category: 'backend',
       level: 'Advanced',
       icon: 'Code2',
-      description: `Python development with Django and Flask frameworks.\nExperience with data processing and automation scripts.`,
-      experience: '3+ years'
+      description: `Python development with FastApi and Flask frameworks.\nExperience with data processing and AI intergration.`,
+      experience: '1+ years'
     },
     {
       id: 8,
@@ -126,7 +126,7 @@ const SkillsDisplay = () => {
       level: 'Advanced',
       icon: 'Zap',
       description: `Fast, unopinionated web framework for Node.js.\nExperience with middleware, routing, and authentication.`,
-      experience: '3+ years'
+      experience: '1+ years'
     },
 
     // Tools & DevOps
@@ -137,7 +137,7 @@ const SkillsDisplay = () => {
       level: 'Expert',
       icon: 'GitBranch',
       description: `Version control with Git and GitHub workflows.\nExperience with branching strategies and code reviews.`,
-      experience: '5+ years'
+      experience: '2+ years'
     },
     {
       id: 10,
@@ -146,7 +146,7 @@ const SkillsDisplay = () => {
       level: 'Intermediate',
       icon: 'Package',
       description: `Containerization with Docker and Docker Compose.\nExperience with multi-stage builds and orchestration.`,
-      experience: '2+ years'
+      experience: '1+ years'
     },
     {
       id: 11,
@@ -155,7 +155,7 @@ const SkillsDisplay = () => {
       level: 'Intermediate',
       icon: 'Cloud',
       description: `Cloud services including EC2, S3, and Lambda.\nExperience with serverless architecture and deployment.`,
-      experience: '2+ years'
+      experience: '1+ years'
     },
 
     // Database
@@ -166,7 +166,7 @@ const SkillsDisplay = () => {
       level: 'Advanced',
       icon: 'Database',
       description: `NoSQL database design with MongoDB and Mongoose.\nExperience with aggregation pipelines and indexing.`,
-      experience: '3+ years'
+      experience: '1+ years'
     },
     {
       id: 13,
@@ -175,14 +175,14 @@ const SkillsDisplay = () => {
       level: 'Intermediate',
       icon: 'HardDrive',
       description: `Relational database design with complex queries.\nExperience with migrations, triggers, and optimization.`,
-      experience: '2+ years'
+      experience: '1+ years'
     }
   ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
@@ -201,8 +201,11 @@ const SkillsDisplay = () => {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full"
-        />
+          
+          className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto">
+            
+        
+        </motion.div>
       </div>
     );
   }
@@ -279,14 +282,10 @@ const SkillsDisplay = () => {
               >
                 <CanvasErrorBoundary onSwitchToGrid={() => setViewMode('grid')}>
                   <Suspense fallback={
-                    <div className="w-full h-96 bg-card rounded-xl flex items-center justify-center">
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                        className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full"
-                      />
-                    </div>
-                  }>
+                      <div className="w-full h-96 bg-card rounded-xl flex items-center justify-center">
+                        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto" />
+                      </div>
+                    }>
                     <Skill3DIcon skills={skills} activeCategory={activeCategory} />
                   </Suspense>
                 </CanvasErrorBoundary>
@@ -315,13 +314,13 @@ const SkillsDisplay = () => {
               <h2 className="text-2xl font-bold text-foreground mb-4">
                 Continuous Learning & Growth
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                My technical journey spans over 5 years of hands-on development experience.\nI believe in staying current with emerging technologies and best practices,\nconstantly expanding my skill set to deliver innovative solutions.
+              <p className="text-muted-foreground leading-relaxed mb-6 text-base">
+                My technical journey spans over 3 years of hands-on development experience.I believe in staying current with emerging technologies and best practices,constantly expanding my skill set to deliver innovative solutions.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="flex items-center gap-2 text-primary">
                   <Icon name="Award" size={20} />
-                  <span className="text-sm font-medium">5+ Years Experience</span>
+                  <span className="text-sm font-medium">3+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-2 text-secondary">
                   <Icon name="BookOpen" size={20} />

@@ -6,9 +6,9 @@ import Icon from './AppIcon';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: 'Github', url: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: 'Linkedin', url: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: 'Twitter', url: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: 'Github', url: 'https://github.com/victormutune', label: 'GitHub' },
+    { icon: 'Linkedin', url: 'https://www.linkedin.com/in/victor-ndiritu-130908204/', label: 'LinkedIn' },
+    { icon: 'Twitter', url: 'https://twitter.com/victornderitu', label: 'Twitter' },
     { icon: 'Mail', url: 'mailto:vqeeh1234@gmail.com', label: 'Email' },
   ];
   return (
@@ -22,10 +22,17 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between  md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-lg md:text-xl font-heading font-bold mb-2 text-foreground tracking-tight">About</h3>
-            <p className="text-sm md:text-base text-muted-foreground font-normal leading-relaxed">
-            
-            </p>
+                 <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                <span className="text-primary-foreground font-bold font-mono">VD</span>
+              </div>
+              <div>
+                <a href="/"><h2 className="text-lg font-semibold font-heading text-foreground">
+                  VICKDEV
+                </h2></a>
+             
+              </div>
+            </div>
           </div>
           {/* Quick Links */}
           <div>
@@ -44,7 +51,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-cols-2 sm:flex-row items-center justify-between gap-4 border-t border-border pt-4 mt-4">
           <div className="text-xs md:text-sm text-muted-foreground font-mono tracking-tight text-center sm:text-left">
-            &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+            &copy; {new Date().getFullYear()} Vickdev. All rights reserved.
           </div>
           <div className="flex gap-4 mt-2">
               {socialLinks.map((link) => (

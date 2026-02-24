@@ -51,7 +51,7 @@ const ProjectStats = ({ projects }) => {
           <div className={`w-12 h-12 mx-auto mb-3 rounded-full ${stat?.bgColor} flex items-center justify-center`}>
             <Icon name={stat?.icon} size={24} className={stat?.color} />
           </div>
-          <div className="text-2xl font-bold text-foreground mb-1">{stat?.value}</div>
+          <div className="text-lg md:text-2xl font-bold text-foreground mb-1">{stat?.value}</div>
           <div className="text-sm text-muted-foreground">{stat?.label}</div>
         </motion.div>
       ))}
